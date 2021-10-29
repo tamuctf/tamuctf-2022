@@ -1,0 +1,39 @@
+body {
+    background-color: #B6CBE2;
+    margin: 0;
+   
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 100%; 
+}
+
+  
+a, a:visited {
+    text-decoration: none;
+    text-align: right;
+    display: block;
+    color: black;
+
+}
+
+.container {
+    max-width: 40em;  
+    margin-left: auto;
+    margin-right: auto;   
+
+    padding-top: 1rem;
+
+}
+
+.postcontainer {
+    background-color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: rgb(27, 27, 27);
+}

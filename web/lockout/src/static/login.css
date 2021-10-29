@@ -1,0 +1,45 @@
+body {
+    background-color: #B6CBE2;
+}
+
+.container {
+    max-width: 15em;  
+    max-height: 30em;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 3rem;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 150%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 1em 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    color: white;
+    background-color: #054A91;
+
+    padding: 14px 20px;
+    margin: 1em 0;
+    border: none;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+}

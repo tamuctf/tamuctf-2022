@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    font-family: 'Anek Odia', sans-serif;
+    font-size: 125%;
+    color: white;
+    background: #312F2F;
+}
+
+.container {
+    max-width: 40em;  
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 0.5rem;
+}
+
+a {
+    color: #B0D0D3;
+    padding: 1rem;
+}
+
+button {
+    cursor: pointer;
+    background-color: #FFCAD4;
+    border: none;
+    padding: 12px 28px;
+}
+
+/* _tO_wEb_HTML_CSS_ */
